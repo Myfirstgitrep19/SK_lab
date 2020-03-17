@@ -1,0 +1,75 @@
+Ping statistics for 192.168.8.1:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+C:\WINDOWS\system32>ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter VirtualBox Host-Only Network:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::1c6e:fc1:5913:f698%9
+   IPv4 Address. . . . . . . . . . . : 192.168.56.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Wireless LAN adapter Połączenie lokalne* 10:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Ethernet adapter Ethernet:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : lab.pwsz.local
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::fc7b:368c:36c9:ebc1%15
+   IPv4 Address. . . . . . . . . . . : 192.168.100.7
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::1%15
+                                       192.168.100.1
+
+C:\WINDOWS\system32>ping 192.168.100.1
+
+Pinging 192.168.100.1 with 32 bytes of data:
+Reply from 192.168.100.1: bytes=32 time=1ms TTL=64
+Reply from 192.168.100.1: bytes=32 time=1ms TTL=64
+Reply from 192.168.100.1: bytes=32 time=1ms TTL=64
+Reply from 192.168.100.1: bytes=32 time=1ms TTL=64
+
+Ping statistics for 192.168.100.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+
+C:\WINDOWS\system32>arp -a
+
+Interface: 192.168.56.1 --- 0x9
+  Internet Address      Physical Address      Type
+  192.168.56.255        ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+
+Interface: 192.168.100.7 --- 0xf
+  Internet Address      Physical Address      Type
+  192.168.100.1         9c-7d-a3-22-0e-50     dynamic
+  192.168.100.2         00-04-30-89-e3-8a     dynamic
+  192.168.100.5         78-24-af-0a-36-68     dynamic
+  192.168.100.6         40-b0-76-17-ec-71     dynamic
+  192.168.100.13        9c-d2-1e-1b-8a-2d     dynamic
+  192.168.100.255       ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+C:\WINDOWS\system32>arp -d *
+
+C:\WINDOWS\system32>arp -s 157.55.85.212 00-aa-00-62-c6-09
